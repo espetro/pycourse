@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Capitulo2</title>
+<title>Capitulo1</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,23 +13077,75 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Cap&#237;tulo-1:-un-padawan-de-Python">Cap&#237;tulo 1: un padawan de Python<a class="anchor-link" href="#Cap&#237;tulo-1:-un-padawan-de-Python">&#182;</a></h1><p><em>Del curso "Python y Machine Learning: de 0 a 100 con Reinforcement Learning"</em> <br/>
-<em>Impartido por MalagaAI, <a href="https://www.linkedin.com/in/aimatesanz/">Andrés Matesanz</a> y <a href="https://www.linkedin.com/in/quinoterrasa/">Joaquín Terrasa</a></em> <br/>
+<h1 id="Cap&#237;tulo-1:-un-Padawan-de-Python">Cap&#237;tulo 1: un Padawan de Python<a class="anchor-link" href="#Cap&#237;tulo-1:-un-Padawan-de-Python">&#182;</a></h1><p><em>Del curso "Python y Machine Learning: de 0 a 100 con Reinforcement Learning"</em> <br/>
+<em>Impartido por MalagaAI, [Andrés Matesanz][mate] y [Joaquín Terrasa][quim]</em> <br/>
 <em>24 de Marzo de 2020</em> <br/></p>
-<p>Duración estimada: <strong>2 horas</strong> en streaming.</p>
+<p>Duración estimada: <strong>3 horas</strong>: 2 en streaming + 1 en trabajo individual.</p>
+<p><small>Capítulo anterior (Introducción a Python): https://github.com/Matesanz/C0-intro-python</small></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;tGsKzZtRwxw&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="100"
+            height="100"
+            src="https://www.youtube.com/embed/tGsKzZtRwxw"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><br/></p>
-<blockquote><p>DISCLAIMER: No soy un maestro de Python. Además, ten en cuenta que este es el primer curso de Python y RL. ¡Eres beta-tester! 😝 <br/>
-DISCLAIMER 2: Todos los bloques tienen recursos para seguir avanzando (bien en castellano o inglés)</p>
+<blockquote><p>DISCLAIMER: ¡Eres beta-tester de este curso! 😝 Si tienes sugerencias o ves fallos, por favor, comunicanoslo 💚 <br/></p>
 </blockquote>
-<p><br/></p>
-<p><strong>Hey!</strong> Antes de comenzar, tienes 3 modos de obtener este <em>notebook</em>.</p>
+<p>Este <em>notebook</em> está orientado a introducirte un poco más en la programación computacional - ¡ojito! <u>Aunque lo centramos en Python, la mayoría de conceptos son aplicables a otros lenguajes</u> para ciencia de datos (R, Julia, C++, etc.). El contenido se agrupa en 3 bloques principales, de los cuales resaltamos dos por estar estrictamente relacionados con la ciencia de datos:</p>
 <ol>
-<li>A través de GitHub, en el repositorio <a href="">@espetro/pyCourse</a>. Duplicas el repositorio (bien descargas el <code>.zip</code> o ejecutas <code>git clone</code>) y usas el <em>notebook</em> en local.</li>
-<li>A través de Google Colab, siguiendo <a href="https://colab.research.google.com/">este enlace</a>.</li>
-<li>Otra alternativa para no iniciar sesión es usar Binder: <a href="https://mybinder.org/">aquí el enlace</a>.</li>
+<li>Mejor y más sencillo: cómo ser un maestro zen (de Python)</li>
+<li><strong>Programación Funcional</strong></li>
+<li><strong>Computación numérica</strong></li>
 </ol>
-<p><br/></p>
+<p>Además, al final del <em>notebook</em>, así como en cada bloque, hay varios recursos para que podáis ir avanzando por vuestra cuenta. Antes de comenzar, hay 3 modos de obtener este <em>notebook</em>.</p>
+<ul>
+<li>A través de GitHub, en el repositorio <a href="">@espetro/pyCourse</a>. Duplicas el repositorio (bien descargas el <code>.zip</code> o ejecutas <code>git clone</code>) y usas el <em>notebook</em> en local. Yo uso <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a> pero también podeis usar IPython.</li>
+<li>Mediante <a href="https://mybinder.org/v2/gh/espetro/pycourse/master">Binder</a>, un entorno de <em>notebooks</em> gratuito en la nube. Como alternative también lo tenéis en <a href="">Google Colab</a>.</li>
+</ul>
+<p><br/><br/></p>
 <p><img src="https://i.imgur.com/yAwThCj.jpg" width="30%" style="margin-left:25em"/></p>
 <p>Espero que todo funcione 🤞🤞</p>
 <p><br/></p>
@@ -13109,11 +13161,11 @@ DISCLAIMER 2: Todos los bloques tienen recursos para seguir avanzando (bien en c
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Por-qu&#233;-usamos-Python">Por qu&#233; usamos Python<a class="anchor-link" href="#Por-qu&#233;-usamos-Python">&#182;</a></h3><p><img src="https://i.imgur.com/Xt1NL3Y.png" width="60%"/></p>
+<h4 id="Por-qu&#233;-usamos-Python">Por qu&#233; usamos Python<a class="anchor-link" href="#Por-qu&#233;-usamos-Python">&#182;</a></h4><p><img src="https://i.imgur.com/Xt1NL3Y.png" width="60%"/></p>
 <p><br/></p>
-<p>Creo que este punto es importante porque, por un lado, <strong>te hace mejor programador</strong>, al razonar los motivos por los que programas en <code>X</code> y no solo porque <em>mi empresa o universidad trabaja con X</em>; y por otro lado, puedes lograr a <strong>aprovechar las ventajas</strong> del lenguaje que usas.</p>
+<p>Creo que este punto es importante porque, por un lado, <strong>te hace mejor programador</strong>, al razonar los motivos por los que programas en $X$ y no solo porque <em>mi empresa o universidad trabaja con $X$</em>; y por otro lado, puedes lograr a <strong>aprovechar las ventajas</strong> del lenguaje que usas.</p>
 <ul>
-<li>Es un lenguaje enfocado en la <strong>legibilidad</strong>, trabajando con un gran subconjunto de palabras del inglés. De esta manera, proporciona un <u>balance justo entre productividad y mantenimiento</u><blockquote><p>Fíjate! En Python no usamos corchetes <code>{}</code> para definir funciones ni bucles</p>
+<li>Es un lenguaje enfocado en la <strong>legibilidad</strong>, trabajando con un gran subconjunto de palabras del inglés. De esta manera, proporciona un <u>balance justo entre productividad y mantenimiento</u><blockquote><p>Fíjate! En Python no usamos corchetes <code>{}</code> para definir funciones ni bucles. Por defecto tampoco usamos tipos y además, se evita el uso de notación <em>camelCase</em> (<code>miFuncion</code>). Además, hay guias oficiales de cómo escribir código y documentación en Python 😌</p>
 </blockquote>
 </li>
 </ul>
@@ -13146,7 +13198,24 @@ En concreto, Python usa algo llamado <a href="https://hackernoon.com/python-duck
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Micro-apunte-sobre-ayuda">Micro apunte sobre ayuda<a class="anchor-link" href="#Micro-apunte-sobre-ayuda">&#182;</a></h3><p>De aquí en adelante veremos algunos bloques teóricos y prácticos complejos. En Python, puedes usar <strong><code>help()</code></strong> sobre cualquier variable, palabra predefinida u objeto para obtener más información.</p>
+<h2 id="Mejor-y-m&#225;s-sencillo:-c&#243;mo-ser-un-maestro-zen-(de-Python)">Mejor y m&#225;s sencillo: c&#243;mo ser un maestro zen (de Python)<a class="anchor-link" href="#Mejor-y-m&#225;s-sencillo:-c&#243;mo-ser-un-maestro-zen-(de-Python)">&#182;</a></h2><p>En este bloque revisamos <strong>prácticas de programación</strong> en Python (aunque aplicables a otros lenguajes), con el fin de facilitar tu manejo con Python.</p>
+<h3 id="&#191;Por-qu&#233;-hay-tantas-versiones-de-Python?-&#129327;-&#191;POR-QU&#201;?-&#128557;&#128557;&#128557;&#128557;">&#191;Por qu&#233; hay tantas versiones de Python? &#129327; &#191;POR QU&#201;? &#128557;&#128557;&#128557;&#128557;<a class="anchor-link" href="#&#191;Por-qu&#233;-hay-tantas-versiones-de-Python?-&#129327;-&#191;POR-QU&#201;?-&#128557;&#128557;&#128557;&#128557;">&#182;</a></h3><p>Las versiones de Python vienen a ser como la familia de Cletus de Los Simpsons:</p>
+<p><img src="https://i.imgur.com/rfhQ762.gif" alt="cletus"></p>
+<ul>
+<li>Explicar las diferencias entre Python 2 y 3. Py2 perdió soporte este año!</li>
+<li>Nos enfocamos en Python 3.x.<ul>
+<li>Principales características versiones 3.0 - 3.4.</li>
+<li>En detalle: características de las versiones 3.5, 3.6, 3.7 y 3.8. Por qué elegimos la 3.7 como base.<ul>
+<li><a href="https://docs.python.org/3/whatsnew/3.5.html">3.5</a>: Corutinas asincronas, operador matricial <code>@</code>, tipado, </li>
+<li><a href="https://docs.python.org/3/whatsnew/3.6.html">3.6</a>: Formateo con <code>f""</code>, separadores de millones con barrabaja <code>1_000_000</code>, mejor implementacion dict</li>
+<li><a href="https://docs.python.org/3/whatsnew/3.7.html">3.7</a>: Mejor concurrencia, Mejor tipado.</li>
+<li><a href="https://docs.python.org/3/whatsnew/3.8.html">3.8</a>: Mejora varias funciones de las versiones anteriores y añade más complejidad al lenguaje 🙂</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Ayuda">Ayuda<a class="anchor-link" href="#Ayuda">&#182;</a></h3><p>En Python, puedes usar <strong><code>help()</code></strong> sobre cualquier variable, palabra predefinida u objeto para obtener más información.</p>
 
 </div>
 </div>
@@ -13299,14 +13368,14 @@ class NoneType(object)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Micro-apuntes-sobre-formateo-de-texto">Micro apuntes sobre formateo de texto<a class="anchor-link" href="#Micro-apuntes-sobre-formateo-de-texto">&#182;</a></h3><p>Podemos formatear el texto en Python de varias maneras. Veamos cuáles hay:</p>
+<h3 id="Formateo-de-texto">Formateo de texto<a class="anchor-link" href="#Formateo-de-texto">&#182;</a></h3><p>Podemos formatear el texto en Python de varias maneras. Veamos cuáles hay:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hoy es&quot;</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;de Marzo de&quot;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>           <span class="c1"># sintaxis clasica</span>
@@ -13316,6 +13385,9 @@ class NoneType(object)
 
 <span class="n">dia</span><span class="p">,</span> <span class="n">anyo</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">2020</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hoy es </span><span class="si">{</span><span class="n">dia</span><span class="si">}</span><span class="s2"> de Marzo de </span><span class="si">{</span><span class="n">anyo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>          <span class="c1"># sintaxis similar a JS ES6 y Bash [solo disponible a partir de 3.6]</span>
+
+<span class="n">mi_dinero</span> <span class="o">=</span> <span class="mi">1_000_000</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tengo </span><span class="si">{</span><span class="n">mi_dinero</span><span class="si">}</span><span class="s2"> de € en el banco 🤑&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13337,6 +13409,7 @@ Hoy es 24 de Marzo de 2020
 Hoy es 24 de Marzo de 2020
 Hoy es 24 de Marzo de 2020
 Hoy es 24 de Marzo de 2020
+Tengo 1000000 de € en el banco 🤑
 </pre>
 </div>
 </div>
@@ -13348,45 +13421,108 @@ Hoy es 24 de Marzo de 2020
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Micro-recordatorio-del-cap&#237;tulo-0:-Tipos-de-datos">Micro recordatorio del cap&#237;tulo 0: Tipos de datos<a class="anchor-link" href="#Micro-recordatorio-del-cap&#237;tulo-0:-Tipos-de-datos">&#182;</a></h3><p>¿Recuerdas los tipos de datos principales que dimos en el capítulo 0?</p>
-<p><img src="https://i.imgur.com/cCJ7SSD.png" width="60%"/></p>
+<h3 id="Tipado-de-datos">Tipado de datos<a class="anchor-link" href="#Tipado-de-datos">&#182;</a></h3><h4 id="S&#237;ntesis-de-la-clase-anterior">S&#237;ntesis de la clase anterior<a class="anchor-link" href="#S&#237;ntesis-de-la-clase-anterior">&#182;</a></h4><p>¿Recuerdas los tipos de datos principales que dimos en el capítulo 0?</p>
+<p><img src="https://i.imgur.com/cCJ7SSD.png" width="50%"/></p>
 <p>Todos estos tipos se pueden comprobar con la función <code>type()</code>. Además, hay que tener en cuenta otros tipos fundamentales:</p>
 <ul>
 <li><p>¿Conoces <code>null</code>? En Python no existe, pero tenemos <strong><code>None</code></strong>, cuyo tipo es <code>NoneType</code>.</p>
 </li>
-<li><p>Toda clase que creemos se considera un tipo nuevo. Por ello, toda instancia del objeto es del tipo de la clase.</p>
+<li><p><u>Toda clase que creemos se considera un tipo nuevo</u>. Por ello, toda instancia del objeto es del tipo de la clase.</p>
 <blockquote><p>Si tenemos una clase <code>Persona</code> y una instancia/objeto <code>pepe = Persona(edad=32, altura=180)</code>, <code>type(pepe)</code> es <code>Persona</code></p>
 </blockquote>
 </li>
 <li><p>Además, en Python <a href="https://dbader.org/blog/python-first-class-functions"><strong>todas las funciones son objetos</strong></a>. Esto se conoce como <em>First-Class Functions</em> y permite, entre otras cosas, usar las variables como parámetros para las funciones, y almacenar las funciones en bases de datos.</p>
 </li>
 </ul>
-<p>Podeis ver todos los tipos <a href="https://docs.python.org/3.7/library/types.html">aquí</a>.</p>
-<h4 id="C&#243;mo-comprobar-la-equivalencia-de-tipos-y-datos-en-Python">C&#243;mo comprobar la equivalencia de tipos y datos en Python<a class="anchor-link" href="#C&#243;mo-comprobar-la-equivalencia-de-tipos-y-datos-en-Python">&#182;</a></h4><p>Muy simple: en vez de usar <code>==</code>, en Python podemos usar <code>is</code> (la cual también podemos usar para comprobar equivalencia de datos):</p>
-<div class="highlight"><pre><span></span><span class="n">lista1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
-
-<span class="n">filtrar_errores</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lista1</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
-
-<span class="n">sumar_dos</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">filtrar_errores</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">sumar_dos</span><span class="p">)</span>
-
-<span class="c1"># tambien podemos usar &quot;is&quot; para</span>
-<span class="n">temp_var</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="k">if</span> <span class="n">temp_var</span> <span class="ow">is</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Perfecto! No usaremos mas &#39;==&#39;&quot;</span><span class="p">)</span>
-</pre></div>
-<p>¿Qué nos dará?</p>
+<p>Podemos ver todos los tipos <a href="https://docs.python.org/3.7/library/types.html">aquí</a>.</p>
+<h5 id="C&#243;mo-comprobar-la-equivalencia-de-tipos-y-datos-en-Python">C&#243;mo comprobar la equivalencia de tipos y datos en Python<a class="anchor-link" href="#C&#243;mo-comprobar-la-equivalencia-de-tipos-y-datos-en-Python">&#182;</a></h5><p>Muy simple: en vez de usar <code>==</code>, en Python podemos usar <code>is</code> (la cual también podemos usar para comprobar equivalencia de datos):</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lista1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+
+<span class="n">filtrar_errores</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lista1</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+
+<span class="n">sumar_dos</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">filtrar_errores</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">filtrar_errores</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sumar_dos</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 3, &#39;5&#39;, 7, &#39;9&#39;]
+[3, 5, 9]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tambien podemos usar &quot;is&quot; para</span>
+<span class="n">temp_var</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="k">if</span> <span class="n">temp_var</span> <span class="ow">is</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Perfecto! No usaremos mas &#39;==&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Perfecto! No usaremos mas &#39;==&#39;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Veamos los tipos de la clase Persona</span>
+
+
+
+<span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edad</span><span class="p">,</span> <span class="n">altura</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">edad</span> <span class="o">=</span> <span class="n">edad</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">altura</span> <span class="o">=</span> <span class="n">altura</span>
@@ -13625,16 +13761,15 @@ Hoy es 24 de Marzo de 2020
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h2 id="Python-&#191;est&#225;ticamente-tipado?-&#128561;&#128561;">Python &#191;est&#225;ticamente tipado? &#128561;&#128561;<a class="anchor-link" href="#Python-&#191;est&#225;ticamente-tipado?-&#128561;&#128561;">&#182;</a></h2><p>¡Sí sí sí! <a href="https://www.pythonsheets.com/notes/python-typing.html"><strong>Aquí teneis la chuleta</strong></a>. Realmente el tipado es estático, si no que se comprueba antes de que sea ejecutado, algo así <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">como pasa con JavaScript y TypeScript</a>. Esta posibilidad <strong>se introduce en <a href="https://www.python.org/dev/peps/pep-0484/">Python 3.5</a></strong> y se mejora en las siguientes versiones.</p>
-<p>Usaremos el <a href="https://docs.python.org/3/library/typing.html">módulo <code>typing</code></a> para ello</p>
+<h4 id="Python-&#191;est&#225;ticamente-tipado?-&#128561;&#128561;">Python &#191;est&#225;ticamente tipado? &#128561;&#128561;<a class="anchor-link" href="#Python-&#191;est&#225;ticamente-tipado?-&#128561;&#128561;">&#182;</a></h4><p>Bueno... <a href="https://www.pythonsheets.com/notes/python-typing.html">más o menos</a>. Realmente Python permite añadir <strong>anotaciones de tipo</strong>. ¿Qué significa esto? Pues que <strong>sin una aplicación externa</strong> (como un plug-in de un IDE) <strong>no es posible aprovechar esta opción</strong>, pues el intérprete de Python no lo comprueba. Esta aplicación externa se ejecuta antes que el intérprete, y para la ejecución si encuentra algún conflicto de tipos, como ocurre en los lenguajes estáticamente tipados.</p>
+<p>Esta posibilidad <strong>se introduce en <a href="https://www.python.org/dev/peps/pep-0484/">Python 3.5</a></strong> y se mejora en las siguientes versiones. Usaremos el <a href="https://docs.python.org/3/library/typing.html">módulo <code>typing</code></a> para ello.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dtime</span>
@@ -13661,11 +13796,11 @@ Hoy es 24 de Marzo de 2020
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Necesitamos insertar la fecha en el formato &quot;YYYY-MM-DD&quot; ! </span>
-<span class="n">Quino</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s2">&quot;Quino&quot;</span><span class="p">,</span> <span class="s2">&quot;181&quot;</span><span class="p">,</span> <span class="s2">&quot;1996-11-11&quot;</span><span class="p">)</span>
+<span class="n">Quino</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s2">&quot;Quino&quot;</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="s2">&quot;1996-11-11&quot;</span><span class="p">)</span>
 
 <span class="n">Quino</span><span class="o">.</span><span class="n">wave</span><span class="p">()</span>
 </pre></div>
@@ -13696,114 +13831,75 @@ Hoy es 24 de Marzo de 2020
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h2 id="Si-quieres-ir-r&#225;pido,-programa-solo.-Si-quieres-llegar-lejos,-programa-con-los-dem&#225;s"><em>Si quieres ir r&#225;pido, programa solo. Si quieres llegar lejos, programa con los dem&#225;s</em><a class="anchor-link" href="#Si-quieres-ir-r&#225;pido,-programa-solo.-Si-quieres-llegar-lejos,-programa-con-los-dem&#225;s">&#182;</a></h2><p><em>Worst translation ever, but the point is</em>: <strong>Documenta y testea</strong>. Esto no es algo unico de Python, pero hacemos énfasis porque en Python prima la <strong>legibilidad</strong>.</p>
+<p>Existen, además, tipos auxiliares como <code>Union</code>, que permiten dos tipos para una sola variable, y <code>Optional</code>, que permite que la variable sea de un tipo o <code>None</code>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Permite representar personas físicas&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">edad</span><span class="p">,</span> <span class="n">altura</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Documentacion al estilo de R docstrings</span>
-<span class="sd">        </span>
-<span class="sd">        @param nombre: el nombre de la persona</span>
-<span class="sd">        @param edad: su edad</span>
-<span class="sd">        @param altura: su altura, en centrimetros</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">edad</span> <span class="o">=</span> <span class="n">edad</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">altura</span> <span class="o">=</span> <span class="n">altura</span>
-    
-    <span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Dibuja la información de la persona por pantalla&quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mi edad es </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">edad</span><span class="si">}</span><span class="s2"> y mi altura es </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">altura</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># es preferible este &#39;print&#39; a</span>
-        <span class="c1"># print(&quot;Mi edad es %d y mi altura es %.2f&quot; % (self.edad, self.altura))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">NewType</span>
+
+<span class="c1"># Los tipos (para tipar) empiezan por mayusculas y si usan camelCase</span>
+
+<span class="n">variable_temporal</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="mf">3.14</span> <span class="c1"># acepta cualquier tipo. Similar a TypeScript, no?    </span>
+
+<span class="n">TextoHTTP</span> <span class="o">=</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>  <span class="c1"># imagina que haces una peticion HTTP y no llega...¿que haces? Bien puedes capturar un error, u obtener un tipo &#39;None&#39;</span>
+
+<span class="c1"># Y si estas haciendo un clasificador de razas de gatos y perros, y quieres que te devuelva el tipo &quot;Gato&quot; o &quot;Perro&quot;?</span>
+<span class="n">TypeGato</span> <span class="o">=</span> <span class="n">NewType</span><span class="p">(</span><span class="s2">&quot;Gato&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="n">TypePerro</span> <span class="o">=</span> <span class="n">NewType</span><span class="p">(</span><span class="s2">&quot;Perro&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="n">ResultadoNN</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">TypeGato</span><span class="p">,</span> <span class="n">TypePerro</span><span class="p">]</span>
+
+<span class="n">variable_temporal</span> <span class="o">=</span> <span class="s2">&quot;hehe&quot;</span>
+
+<span class="c1"># A partir del 3.8 se pueden definir constantes (Final, como en JAVA)</span>
+<span class="c1"># PI: Final[float] = 3.14</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[50]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>__main__.Persona</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Crea-c&#243;digo-legible">Crea c&#243;digo legible<a class="anchor-link" href="#Crea-c&#243;digo-legible">&#182;</a></h4><p>Es lo que llaman <em>el Zen de Python</em>. Es <a href="https://www.python.org/dev/peps/pep-0020/">uno de los primeros PEP</a> creados y sintetiza las ideas para crear codigo legible.</p>
+<h3 id="Crea-c&#243;digo-legible">Crea c&#243;digo legible<a class="anchor-link" href="#Crea-c&#243;digo-legible">&#182;</a></h3><p>Es lo que llaman <em>el Zen de Python</em>. Es <a href="https://www.python.org/dev/peps/pep-0020/">uno de los primeros PEP</a> creados y sintetiza las ideas para crear codigo legible.</p>
 <div class="highlight"><pre><span></span>Lo explícito es mejor que lo implícito.
 Lo plano es mejor que lo enrevesado.
 Los errores nunca deberían de ser silenciados.
 Ahora es mejor que nunca.
 </pre></div>
+<p>Podemos subrayar varias convenciones:</p>
+<ul>
+<li>Las clases y tipos definidos empiezan por mayúscula, y usan notación <code>camelCase</code></li>
+<li>Las variables y parámetros usan <code>notacion_con_barras_bajas</code></li>
+<li>Se incluye al menos una breve documentación <code>"""De este estilo"""</code> para cada funcion</li>
+<li>Para indicar variables protegidas usamos 1 barra baja: <code>_variable_protegida</code></li>
+<li><strong>Para indicar variables privadas usamos 2 barras bajas</strong>: <code>__variable_privada</code></li>
+</ul>
 <p>Otro de los PEP fundamentales <a href="https://www.python.org/dev/peps/pep-0008/">se centra en la guía de estilo para Python</a>: el <strong>PEP8 es una de las guías fundamentales</strong> para estandarizar codigo en Python.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Documenta">Documenta<a class="anchor-link" href="#Documenta">&#182;</a></h4><p>Tanto si es para desarrollar herramientas más complejas por ti mismo como si estás participando en un proyecto con otros desarrolladores, documentar "correctamente" es esencial. Python tiene su propia guía de estilo para la documentación, <strong>basada en reStructuredText y condensada en el <a href="https://www.python.org/dev/peps/pep-0287/">PEP287</a> y <a href="https://www.python.org/dev/peps/pep-0257/">PEP257</a></strong>. En Python, los llamamos <strong><em>docstrings</em></strong>.</p>
-<p>De manera simple, reStructuredText es un lenguaje de texto enriquecido que compila a HTML. Veámoslo:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[150]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">entusiasmadamente</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Saluda a una persona, con fuerza o no.</span>
-
-<span class="sd">        Parametros</span>
-<span class="sd">        ----------</span>
-<span class="sd">        nombre : str, obligatorio</span>
-<span class="sd">            El nombre de la persona a saludar</span>
-<span class="sd">        entusiasmadamente: bool, opcional</span>
-<span class="sd">            Elige si saludar con fuerza o no</span>
-
-<span class="sd">        Lanza</span>
-<span class="sd">        ------</span>
-<span class="sd">        TypeError</span>
-<span class="sd">            Si el nombre es None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">nombre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;El nombre es None&quot;</span><span class="p">)</span>
-
-        <span class="n">exclamacion</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;!&quot;</span><span class="p">][</span><span class="n">entusiasmadamente</span><span class="p">]</span>  <span class="c1"># equivalente a un operador ternario ?: (no recomendable! haz un &#39;if-else&#39;. Esto no es tan legible)</span>
-            
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola Don Pepito! Hola Don </span><span class="si">{}{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">exclamacion</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Illo</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Kino&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__no_lo_sabras</span> <span class="o">=</span> <span class="kc">True</span>
         
-<span class="n">saludar</span><span class="p">(</span><span class="s2">&quot;Jose&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">saludar</span><span class="p">(</span><span class="s2">&quot;Jose&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="n">Illo</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var1</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">var1</span><span class="o">.</span><span class="n">__no_lo_sabras</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13820,12 +13916,29 @@ Ahora es mejor que nunca.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Hola Don Pepito! Hola Don Jose!
-Hola Don Pepito! Hola Don Jose
+<pre>Kino
 </pre>
 </div>
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-25-3cd2d344543d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      6</span> var1 <span class="ansi-yellow-intense-fg ansi-bold">=</span> Illo<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      7</span> print<span class="ansi-yellow-intense-fg ansi-bold">(</span>var1<span class="ansi-yellow-intense-fg ansi-bold">.</span>nombre<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 8</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>print<span class="ansi-yellow-intense-fg ansi-bold">(</span>var1<span class="ansi-yellow-intense-fg ansi-bold">.</span>__no_lo_sabras<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>: &#39;Illo&#39; object has no attribute &#39;__no_lo_sabras&#39;</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13833,40 +13946,7 @@ Hola Don Pepito! Hola Don Jose
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>Fíjate! Una de las mejores maneras de documentar código en Python es <strong>asignar correctamente los nombres</strong> a funciones y variables temporales. Ten en cuenta el estilo de Python: <code>estoNoEstaFino</code>, <code>esto_si_es_mejor</code></p>
-</blockquote>
-<p>👉 <a href="https://realpython.com/documenting-python-code/">más info</a> 👈</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Pruebas-de-c&#243;digo">Pruebas de c&#243;digo<a class="anchor-link" href="#Pruebas-de-c&#243;digo">&#182;</a></h4><p>Este tema es algo más extenso, así que te daré una idea general. Realmente es algo que se hace a nivel de aplicación, cuando ya estás programando en un IDE (entorno de desarrollo), ya que en Jupyter no es del todo útil.</p>
-<p>La idea fundamental consiste en probar todos los casos posibles de entrada y salida para tu programa, con el fin de <strong>comprobar si tu programa tiende a producir errores</strong>. Además, existe la posibilidad de <strong>simular el funcionamiento de tu programa incluso antes de haberlo programado</strong>, lo que nos ayuda a centrarnos en módulos específicos que necesitan más atención y cuidado.</p>
-<ul>
-<li><p>Unit Testing: Se centra en comprobar que cada bloque (funciones, clases, etc.) funcionan como está previsto. Python incluye la libreria estándar <code>unittest</code>, así como la palabra reservada <code>assert</code>.</p>
-</li>
-<li><p><em>Test-Driven Development</em> (<em>TDD</em>): es una metodología de programación que <u>se centra en realizar primero los tests, para asegurar cómo debe funcionar el programa</u>, para acto seguido implementarlo.</p>
-</li>
-<li><p><em>Mocking</em> (Simulacion): permite simular módulos de tu app que aún no has desarrollado o sobre los que no tienes control. Un paquete bastante usado es <code>mock</code>.</p>
-</li>
-<li><p>Cobertura: facilita el comprobar si todos los bloques de código tiene pruebas de código.</p>
-</li>
-</ul>
-<p>👉 <a href="https://inlab.fib.upc.edu/es/blog/testing-y-mocking-en-python">más info para <em>mocking</em></a> 👈</p>
-<p>👉 <a href="https://parzibyte.me/blog/2019/06/11/unit-testing-python-realizar-pruebas-codigo/">más info para <em>unit testing</em></a> 👈</p>
-<p>👉 <a href="https://alvaromonsalve.com/2019/01/26/test-unitarios-y-cobertura-de-codigo-en-python/">más info para <em>cobertura</em></a> 👈</p>
-<p>👉 <a href="https://www.hektorprofe.net/tutorial/ejemplo-muy-facil-tdd-python">más info para <em>TDD</em></a> 👈</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Generaci&#243;n-de-errores">Generaci&#243;n de errores<a class="anchor-link" href="#Generaci&#243;n-de-errores">&#182;</a></h4><p>Como hemos podido ver antes, para lanzar excepciones o errores en Python usamos la palabra <code>raise</code>, y podemos <em>capturar</em> o controlar los errores con <code>try</code> / <code>except</code></p>
+<h3 id="Generaci&#243;n-de-errores">Generaci&#243;n de errores<a class="anchor-link" href="#Generaci&#243;n-de-errores">&#182;</a></h3><p>Como hemos podido ver antes, para lanzar excepciones o errores en Python usamos la palabra <code>raise</code>, y podemos <em>capturar</em> o controlar los errores con <code>try</code> / <code>except</code></p>
 
 </div>
 </div>
@@ -13942,6 +14022,14 @@ boomboclat
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>👉 <a href="http://docs.python.org.ar/tutorial/3/errors.html">más info</a> 👈</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14271,9 +14359,1234 @@ En la mayoría de IDEs o entornos de desarrollo, puedes marcar con un 🔴 en la
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Decoradores">Decoradores<a class="anchor-link" href="#Decoradores">&#182;</a></h3><p>Los <strong>decoradores</strong> son algo muy interesante, algo único de Python. Es algo así <strong>como las macros de Excel o Rust</strong>: permiten <strong>aplicar la funcionalidad de una clase o una función</strong> a uno o varios bloques del código, integrándose en la sintaxis del lenguaje y <strong>permitiendo una mejor lectura</strong>.</p>
+<p>Podemos entender los decoradores como <u>funciones de alto nivel</u>, pues toman como argumento una función y devuelven otra función. Ésto lo veremos más adelante en el bloque funcional, pero quedate con ese concepto.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">agregar_barritas</span><span class="p">(</span><span class="n">funcion_con_texto</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Agrega barritas arriba y abajo de la funcion&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">envoltorio</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;Aplica las barritas al texto&quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;==================&quot;</span><span class="p">)</span>
+        <span class="n">funcion_con_texto</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;==================&quot;</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">envoltorio</span>
+
+<span class="k">def</span> <span class="nf">illo_que_ase</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Una funcion que produce texto en la consola&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Illo que ase&quot;</span><span class="p">)</span>
+
+<span class="n">con_barritas_todo_es_mejor</span> <span class="o">=</span> <span class="n">agregar_barritas</span><span class="p">(</span><span class="n">illo_que_ase</span><span class="p">)</span>
+
+<span class="n">illo_que_ase</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">con_barritas_todo_es_mejor</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Illo que ase
+
+
+==================
+Illo que ase
+==================
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lo realmente único de los decoradores es su <strong><em>azúcar sintáctico</em></strong>. ¡Puedes declarar el decorador sobre la funcion que escribe texto con una simple <strong><code>@</code></strong>!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@agregar_barritas</span>
+<span class="k">def</span> <span class="nf">illo_que_ase</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Una funcion que produce texto en la consola&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Illo que ase&quot;</span><span class="p">)</span>
+    
+<span class="n">illo_que_ase</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>==================
+Illo que ase
+==================
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Los decoradores se usan mucho en paquetes de computación numérica. Por ejemplo, <a href="https://numba.pydata.org/"><code>numba</code></a> es una libreria que permite pre-compilar código Python a C/C++, y puede mejorar mucho código orientado a computación numérica. En este caso, usa decoradores <code>@jit</code> entre otros.</p>
+<p>👉 <a href="https://realpython.com/primer-on-python-decorators/">más info sobre decoradores</a> 👈</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Estructuras-por-comprensi&#243;n">Estructuras por comprensi&#243;n<a class="anchor-link" href="#Estructuras-por-comprensi&#243;n">&#182;</a></h3><ul>
+<li>Una manera directa de definir un diccionario es usar una sintaxis similar a la que usamos para listas por comprensión</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">,</span> <span class="s2">&quot;altura&quot;</span><span class="p">,</span> <span class="s2">&quot;esJoven&quot;</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;quino&quot;</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+
+<span class="n">dict1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s2">&quot;quino&quot;</span><span class="p">,</span> <span class="n">altura</span><span class="o">=</span><span class="mi">180</span><span class="p">,</span> <span class="n">esJoven</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dict2</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;quino&quot;</span><span class="p">,</span> <span class="s2">&quot;altura&quot;</span><span class="p">:</span> <span class="mi">180</span><span class="p">,</span> <span class="s2">&quot;esJoven&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>  <span class="c1"># al estilo JSON / JavaScript</span>
+<span class="n">dict3</span> <span class="o">=</span> <span class="p">{</span> <span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span> <span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dict3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;nombre&#39;: &#39;quino&#39;, &#39;altura&#39;: 180, &#39;esJoven&#39;: True}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Generadores">Generadores<a class="anchor-link" href="#Generadores">&#182;</a></h4><p>Algo fundamental para lenguajes funcionales como Haskell, son estructuras "pausadas", es decir, en las que <strong>todos sus valores no son calculados al crear la estructura</strong>. El ejemplo más claro está entre <code>list</code> y <code>range</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">rango</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> y </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="n">rango</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 1, 2, 3, 4] y range(0, 5)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Los generadores <strong>se definen sobre estructuras iterables</strong>, es decir, que se puedan recorrer. En cierto modo, cuando creas un iterador sobre una lista, obtienes un objeto <code>Iterador</code> sobre el que puedes usar una función <strong><code>next()</code></strong> para obtener el siguiente objeto en la estructura. Cuando la estructura llega a su fin, lanza un error <code>StopIteration</code> si ejecutas <code>next()</code> sobre el iterador ya vacío.</p>
+<p>Hay dos formas de escribir generadores:</p>
+<ul>
+<li>Si queremos crear generadores similares a listas, podemos usar una notación similar a la de por comprensión:</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">generador2</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">generador2</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">generador2</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;generator object &lt;genexpr&gt; at 0x000001F3A7841448&gt; [1, 4, 9]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Usando la palabra <code>yield</code>. De esta forma, podemos usarlo en cualquier tipo de estructura de datos iterable:</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">obtener_proximo_elemento</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">indice</span><span class="p">,</span> <span class="n">valor</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="p">(</span><span class="n">indice</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
+        
+<span class="n">iterador</span> <span class="o">=</span> <span class="n">obtener_proximo_elemento</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">iterador</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[42]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;generator object obtener_proximo_elemento at 0x000001F3A78418C8&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">next</span><span class="p">(</span><span class="n">iterador</span><span class="p">)</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="nb">next</span><span class="p">(</span><span class="n">iterador</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">iterador</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indice </span><span class="si">{}</span><span class="s2"> valor </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
+    
+<span class="nb">next</span><span class="p">(</span><span class="n">iterador</span><span class="p">)</span>  <span class="c1"># error!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(0, 1), (1, 2)
+Indice 2 valor 3
+Indice 3 valor 4
+Indice 4 valor 5
+Indice 5 valor 6
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>                             Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-43-2ee230f3c694&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      4</span>     print<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;Indice {} valor {}&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>format<span class="ansi-yellow-intense-fg ansi-bold">(</span>i<span class="ansi-yellow-intense-fg ansi-bold">,</span>v<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      5</span> 
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 6</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>next<span class="ansi-yellow-intense-fg ansi-bold">(</span>iterador<span class="ansi-yellow-intense-fg ansi-bold">)</span>  <span class="ansi-red-intense-fg ansi-bold"># error!</span>
+
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>: </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>👉 <a href="https://realpython.com/introduction-to-python-generators/">más info sobre generadores</a> 👈</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="(Opcional)-Documentaci&#243;n">(<strong>Opcional</strong>) Documentaci&#243;n<a class="anchor-link" href="#(Opcional)-Documentaci&#243;n">&#182;</a></h3><p><em>Si quieres ir rápido, programa solo. Si quieres llegar lejos, programa con los demás</em></p>
+<p>Tanto si es para desarrollar herramientas más complejas por ti mismo como si estás participando en un proyecto con otros desarrolladores, documentar adecuadamente es esencial. Python tiene su propia guía de estilo para la documentación, <strong>basada en reStructuredText y condensada en el <a href="https://www.python.org/dev/peps/pep-0287/">PEP287</a> y <a href="https://www.python.org/dev/peps/pep-0257/">PEP257</a></strong>. En Python, los llamamos <strong><em>docstrings</em></strong>.</p>
+<p>De manera simple, reStructuredText es un lenguaje de texto enriquecido que compila a HTML. Veámoslo:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[150]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">entusiasmadamente</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Saluda a una persona, con fuerza o no.</span>
+
+<span class="sd">        Parametros</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nombre : str, obligatorio</span>
+<span class="sd">            El nombre de la persona a saludar</span>
+<span class="sd">        entusiasmadamente: bool, opcional</span>
+<span class="sd">            Elige si saludar con fuerza o no</span>
+
+<span class="sd">        Lanza</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            Si el nombre es None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">nombre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;El nombre es None&quot;</span><span class="p">)</span>
+
+        <span class="n">exclamacion</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;!&quot;</span><span class="p">][</span><span class="n">entusiasmadamente</span><span class="p">]</span>  <span class="c1"># equivalente a un operador ternario ?: (no recomendable! haz un &#39;if-else&#39;. Esto no es tan legible)</span>
+            
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola Don Pepito! Hola Don </span><span class="si">{}{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">exclamacion</span><span class="p">))</span>
+        
+<span class="n">saludar</span><span class="p">(</span><span class="s2">&quot;Jose&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">saludar</span><span class="p">(</span><span class="s2">&quot;Jose&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hola Don Pepito! Hola Don Jose!
+Hola Don Pepito! Hola Don Jose
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Fíjate! Una de las mejores maneras de documentar código en Python es <strong>asignar correctamente los nombres</strong> a funciones y variables temporales. Ten en cuenta el estilo de Python: <code>estoNoEstaFino</code>, <code>esto_si_es_mejor</code></p>
+</blockquote>
+<p>👉 <a href="https://realpython.com/documenting-python-code/">más info</a> 👈</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="(Opcional)-Git-/-GitHub">(<strong>Opcional</strong>) Git / GitHub<a class="anchor-link" href="#(Opcional)-Git-/-GitHub">&#182;</a></h3><p>Git es un software de control de versiones que permite mantener nuestro proyecto de forma sencilla. Se centra en una serie de comandos para darle una estructura en forma de árbol a nuestro proyecto, donde podemos guardar el progreso que hacemos, asi como volver hacia atrás o abrir nuevas ramas de desarrollo (para por ejemplo nuevas características).</p>
+<p>En <em>Machine Learning</em> podemos aplicarlo para, por ejemplo, aplicar varias configuraciones a los hiperparámetros de nuestro modelo, sin que haya conflictos.</p>
+<p><img src="https://i.imgur.com/SqFet5I.png" width="40%"/></p>
+<p>👉 <a href="https://programminghistorian.org/es/lecciones/retirada/introduccion-control-versiones-github-desktop">más info</a> 👈</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="(Opcional)-Pruebas-de-C&#243;digo">(<strong>Opcional</strong>) Pruebas de C&#243;digo<a class="anchor-link" href="#(Opcional)-Pruebas-de-C&#243;digo">&#182;</a></h3><p>Este tema es algo más extenso, así que te daré una idea general. Realmente es algo que se hace a nivel de aplicación, cuando ya estás programando en un IDE (entorno de desarrollo), ya que en Jupyter no es del todo útil.</p>
+<p>La idea fundamental consiste en probar todos los casos posibles de entrada y salida para tu programa, con el fin de <strong>comprobar si tu programa tiende a producir errores</strong>. Además, existe la posibilidad de <strong>simular el funcionamiento de tu programa incluso antes de haberlo programado</strong>, lo que nos ayuda a centrarnos en módulos específicos que necesitan más atención y cuidado.</p>
+<ul>
+<li><p>Unit Testing: Se centra en comprobar que cada bloque (funciones, clases, etc.) funcionan como está previsto. Python incluye la libreria estándar <code>unittest</code>, así como la palabra reservada <code>assert</code>.</p>
+</li>
+<li><p><em>Test-Driven Development</em> (<em>TDD</em>): es una metodología de programación que <u>se centra en realizar primero los tests, para asegurar cómo debe funcionar el programa</u>, para acto seguido implementarlo.</p>
+</li>
+<li><p><em>Mocking</em> (Simulacion): permite simular módulos de tu app que aún no has desarrollado o sobre los que no tienes control. Un paquete bastante usado es <code>mock</code>.</p>
+</li>
+<li><p>Cobertura: facilita el comprobar si todos los bloques de código tiene pruebas de código.</p>
+</li>
+</ul>
+<p>👉 <a href="https://inlab.fib.upc.edu/es/blog/testing-y-mocking-en-python">más info para <em>mocking</em></a> 👈</p>
+<p>👉 <a href="https://parzibyte.me/blog/2019/06/11/unit-testing-python-realizar-pruebas-codigo/">más info para <em>unit testing</em></a> 👈</p>
+<p>👉 <a href="https://alvaromonsalve.com/2019/01/26/test-unitarios-y-cobertura-de-codigo-en-python/">más info para <em>cobertura</em></a> 👈</p>
+<p>👉 <a href="https://www.hektorprofe.net/tutorial/ejemplo-muy-facil-tdd-python">más info para <em>TDD</em></a> 👈</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Librerias-de-c&#225;lculo-computacional">Librerias de c&#225;lculo computacional<a class="anchor-link" href="#Librerias-de-c&#225;lculo-computacional">&#182;</a></h2><p>Python es muy popular para Machine Learning. Algunas de las librerias más conocidas son <code>numpy</code>, <code>pandas</code>, <code>matplotlib</code>, <code>scikit-learn</code>, <code>scipy</code>, y algunas orientadas a redes neuronales, como son <code>tensorflow</code> o <code>pytorch</code>.</p>
-<h3 id="Numpy">Numpy<a class="anchor-link" href="#Numpy">&#182;</a></h3><p>Numpy es el paquete de <strong>computación numérica</strong> más usado de Python. Proporciona una infinidad de estructuras de datos y funciones que permiten el manejo masivo de datos. Es rápido gracias a que ejecuta C por debajo (como si no 😉), y <strong>permite realizar operaciones entre conjuntos grandes de datos</strong>, con un estilo similar a lo que se puede hacer en <u>Matlab y R</u>. Veamos un ejemplo:</p>
+<h2 id="2.-Progamaci&#243;n-funcional">2. Progamaci&#243;n funcional<a class="anchor-link" href="#2.-Progamaci&#243;n-funcional">&#182;</a></h2><p>La programación funcional es un <strong>paradigma de la programación</strong>, basada en el <em>lambda calculus</em>. Realmente ya has dado algo de programación funcional en Python, aunque no te hayas dado cuenta. Las <em>listas por comprensión</em> (<code>[x for x in range(10)]</code>) y la compilación perezosa de funciones es algo ímplicito en el lenguaje. Además, podemos ver otras características de lenguajes funcionales en Python.</p>
+<p>Como antes comentamos, las funciones son <em>ciudadanos de primera clase</em> en Python. Ésto también se conoce como <u>funciones de alto orden</u>: virtualmente, toda función puede <u>ser usada como parámetro de otra función o devolver otra función</u>. Este último concepto, el de devolver otra función, también se conoce como <u>funciones parciales</u>, porque se aplican <em>parcialmente</em>.</p>
+<p>Muchas de las utilidades funcionales están ya incluidas (<em>built-in</em>), en la libreria estándar <a href="https://docs.python.org/3.7/library/functools.html"><em>functools</em></a> o en  <a href="https://docs.python.org/3.7/library/itertools.html"><em>itertools</em></a> (para generar, por ejemplo, secuencias infinitas).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datos_json</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Jorge&quot;</span><span class="p">,</span> <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;altura&quot;</span><span class="p">:</span> <span class="mi">180</span><span class="p">,</span> <span class="s2">&quot;profesion&quot;</span><span class="p">:</span> <span class="s2">&quot;marketing&quot;</span><span class="p">}</span>
+
+<span class="n">datos_json</span><span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">]</span> <span class="c1">#ok! pero y si...</span>
+<span class="n">datos_json</span><span class="p">[</span><span class="s2">&quot;Nombre&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">KeyError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-1-4118594dda04&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      2</span> 
+<span class="ansi-green-fg">      3</span> datos_json<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#34;nombre&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-red-intense-fg ansi-bold">#ok! pero y si...</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 4</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>datos_json<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#34;Nombre&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+
+<span class="ansi-red-intense-fg ansi-bold">KeyError</span>: &#39;Nombre&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datos_json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Nombre&quot;</span><span class="p">,</span> <span class="s2">&quot;te has equivocao de clave :P&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;te has equivocao de clave :P&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Funciones-an&#243;nimas-o-lambda">Funciones an&#243;nimas o <em>lambda</em><a class="anchor-link" href="#Funciones-an&#243;nimas-o-lambda">&#182;</a></h3><p><img src="https://i.imgur.com/IkMaR4v.png" width="35%"/></p>
+<p>Si has usado JavaScript, Haskell, Java 8+, ... conocerás las funciones anónimas. Éstas permiten <strong>definir una función de un solo uso en una sola línea</strong>. Digamos que las funciones que usamos, por ejemplo, para el <code>map</code> (<code>mas1(valor)</code>) solo la usamos ahí. ¿Por qué definir una función nueva, si simplemente puedes hacer...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="c1"># def mas1(valor):</span>
+<span class="c1">#     return valor + 1</span>
+
+<span class="n">list1_mas1</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">valor</span><span class="p">:</span> <span class="n">valor</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">list1_mas1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[38]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[2, 3, 4]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>👉 <a href="https://towardsdatascience.com/python-lambda-function-b6e1fa3420c1">más info</a> 👈</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Map-Reduce">Map-Reduce<a class="anchor-link" href="#Map-Reduce">&#182;</a></h3><table>
+    <tr>
+        <td><img src="https://i.imgur.com/ekzMUV5.png" width="80%"/></td>
+        <td><img src="https://i.imgur.com/sMaPBq7.jpg" width="60%"/></td>
+    </tr>
+</table><p>El <strong>lenguaje funcional</strong> permite una <strong>abstracción</strong> a la hora de <strong>modificar estructuras de datos</strong>. En vez de pensar cómo cambiar una estructura, como hacemos con un bucle <code>for</code>, <strong>pasamos a pensar qué queremos cambiar</strong>. Esto nos ahorra, por ejemplo, errores de acceso a memoria. Además, no tenemos que preocuparnos por iterar sobre la estructura (no usaremos más <code>for</code>, <code>while</code>, ... )</p>
+<p>Vamos a dar <strong>4 funciones fundamentales de los lenguajes funcionales</strong>:</p>
+<ul>
+<li><code>map</code> permite <u>aplicar</u> a cada elemento de una estructura, <u>una función</u>. Por ejemplo, podemos sumar 1 a todos los elementos de una lista:</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">mas1</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">valor</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">mas1</span><span class="p">,</span> <span class="n">list1</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[2, 3, 4]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>filter</code> permite <u>seleccionar</u> los elementos de una estructura que cumplan la función usada. Por ejemplo, podemos escoger solo los numeros pares de una lista:</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">esPar</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">valor</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+
+<span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">esPar</span><span class="p">,</span> <span class="n">list1</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[2]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>reduce</code> permite <u>reorganizar</u> una estructura A para obtener otra estructura B. Normalmente, se usa para condensar estructuras complejas y conseguir estructuras mas simples, con valores acumulados. Por ejemplo, podemos sumar todos los elementos de una lista para obtener un valor total (una estructura más simple):</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">valor1</span><span class="p">,</span> <span class="n">valor2</span><span class="p">):</span>
+    <span class="c1"># ojito! Ten en cuenta que, para &#39;reduce&#39; el valor se acumula en el segundo (2do) valor</span>
+    <span class="k">return</span> <span class="n">valor1</span> <span class="o">+</span> <span class="n">valor2</span>
+
+<span class="n">reduce</span><span class="p">(</span><span class="n">sumar</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>zip</code> permite <u>agrupar</u> varias estructuras $A_x$ en una sola estructura $B$. La estructura $B$ está <u>formada por tuplas de los elementos de las estructuras $A_x$</u>. Por ejemplo, podemos agrupar los nombres y alturas de personas en una sola lista:</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nombres</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Quino&quot;</span><span class="p">,</span> <span class="s2">&quot;Andres&quot;</span><span class="p">,</span> <span class="s2">&quot;Fernando&quot;</span><span class="p">]</span>
+<span class="n">altura</span> <span class="o">=</span> <span class="p">[</span><span class="mi">181</span><span class="p">,</span> <span class="mi">178</span><span class="p">,</span> <span class="mi">180</span><span class="p">]</span>
+
+<span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">nombres</span><span class="p">,</span> <span class="n">altura</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(&#39;Quino&#39;, 181), (&#39;Andres&#39;, 178), (&#39;Fernando&#39;, 180)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>¿Por qué ocurre ésto? ¿Por qué hay que usar <code>list</code>? Respuesta: generadores (mira más abajo) 👇</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">mas1</span><span class="p">,</span> <span class="n">lista1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">esPar</span><span class="p">,</span> <span class="n">lista1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">nombres</span><span class="p">,</span> <span class="n">altura</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;map object at 0x0000022FD5D08A08&gt;
+&lt;filter object at 0x0000022FD5D085C8&gt;
+&lt;zip object at 0x0000022FD5D089C8&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Inmutabilidad-de-datos">Inmutabilidad de datos<a class="anchor-link" href="#Inmutabilidad-de-datos">&#182;</a></h3><p>Los llamados <strong>lenguajes funcionales puros</strong> es un sub-paradigma que se centra en que <u>el resultado de cualquier función dependa únicamente en los parámetros que le pasas</u>, es decir, si ejecutas 2 veces una función con los mismos parámetros, ambas ejecuciones te devolverán lo mismo. Por ello, si usamos <u>variables mutables</u>, puede pasar esto:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="k">def</span> <span class="nf">agrega_numero</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+    <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">lista</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">agrega_numero</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># ¿Que devuelve?</span>
+<span class="n">agrega_numero</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># ¿Que devuelve?</span>
+</pre></div>
+<p>👆 ahí vemos que <strong>Python no es puramente funcional</strong> (ni queremos 😛).</p>
+<p>Si ya conoces algun lenguaje con variables inmutables, sabrás que (en general) tienen mejor rendimiento que los lenguajes que no: Clojure, Haskell, Scala, Rust... Las ventajas de las estructuras inmutables, es que proporcionan <strong>paralelismo de datos</strong>, <strong>mayor seguridad</strong> y <strong>código más simple</strong>.</p>
+<p><u>Algunas estructuras inmutables en Python son las tuplas, los sets "congelados" (*frozenset*), `range` y los tipos básicos (int, float, ...)</u></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-34-8a53e3328d02&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      1</span> v1 <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-green-intense-fg ansi-bold">True</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>v1<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-cyan-intense-fg ansi-bold">3</span>
+
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;tuple&#39; object does not support item assignment</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;tomeu&quot;</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;ingles c1&quot;</span><span class="p">)</span>
+<span class="n">my_var</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+<span class="n">my_var</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[35]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>frozenset({180, 25, &#39;ingles c1&#39;, &#39;tomeu&#39;})</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>👉 <a href="https://medium.com/dailyjs/the-state-of-immutability-169d2cd11310">más info</a> 👈</p>
+<p>👉 <a href="https://www.youtube.com/watch?v=xJCPpDlk9_w">¿algo práctico?</a> 👈</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="(Opcional)-Lazy-evaluation">(<strong>Opcional</strong>) <em>Lazy evaluation</em><a class="anchor-link" href="#(Opcional)-Lazy-evaluation">&#182;</a></h3><p>Quizás ya te hayas preguntado <u>por qué Python compila código que no es correcto</u>, siempre que esté dentro de funciones o clases. Ésto es porque <strong>Python usa evaluación perezosa</strong> dentro de funciones. Esta funcionalidad no solo está en la evaluación de funciones, sino también en algo llamado <strong>generadores</strong>.</p>
+<p>Básicamente, Python permite <strong>compilar una función cuando es declarada</strong> y solo <strong>comprobar si está correctamente definida cuando se ejecuta al menos una vez</strong>.</p>
+<p>👉 <a href="https://swizec.com/blog/python-and-lazy-evaluation/swizec/5148">más info</a> 👈</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">esto_no_hace_nada</span><span class="p">(</span><span class="n">illo</span><span class="p">):</span>
+    <span class="n">asdlkjqwelkj</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">esto_no_hace_nada</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-44-67ccf1db6a62&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>esto_no_hace_nada<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-43-97c2c1fc4799&gt;</span> in <span class="ansi-cyan-fg">esto_no_hace_nada</span><span class="ansi-blue-intense-fg ansi-bold">(illo)</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-green-intense-fg ansi-bold">def</span> esto_no_hace_nada<span class="ansi-yellow-intense-fg ansi-bold">(</span>illo<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>asdlkjqwelkj
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;asdlkjqwelkj&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">generador_1</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">generador_2</span> <span class="o">=</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
+<span class="n">generador_3</span> <span class="o">=</span> <span class="nb">reversed</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">generador_1</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">generador_1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">generador_2</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">generador_2</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">generador_2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">generador_3</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">generador_3</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">generador_3</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>range(0, 10) &lt;class &#39;range&#39;&gt;
+&lt;enumerate object at 0x000002365B9B9818&gt; &lt;class &#39;enumerate&#39;&gt; [(0, 10), (1, 20), (2, 30)]
+&lt;list_reverseiterator object at 0x000002365BE53248&gt; &lt;class &#39;list_reverseiterator&#39;&gt; [30, 20, 10]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="(Opcional)-Funciones-parciales">(<strong>Opcional</strong>) Funciones parciales<a class="anchor-link" href="#(Opcional)-Funciones-parciales">&#182;</a></h3><p>La idea principal es que <strong>toda función $A$ con $N$ parámetros devuelve otra función $B$ con $N-1$ parámetros</strong>, donde $B$ <strong>tiene un estado interno diferente a $A$</strong>. Ésto quiere decir que, al igual que las clases, las funciones pueden mantener un estado interno (como la referencia <em>self</em> en las clases!). Un ejemplo clásico es el cálculo del <a href="http://www.pythondiario.com/2018/08/sucesion-de-fibonacci-con-python.html">número n de <em>fibonacci</em></a>:</p>
+<p>$f_{0}=0\,$</p>
+<p>$f_{1}=1\,$</p>
+<p>$f_n = f_{n-1} + f_{n-2}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">configurar_fib</span><span class="p">():</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>  <span class="c1"># mantenemos un estado interno en la función. Esto se conoce como &quot;memoization&quot;</span>
+    <span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">a</span>
+        <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">b</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">fib</span>
+        
+<span class="n">fib</span> <span class="o">=</span> <span class="n">configurar_fib</span><span class="p">()</span>
+
+<span class="p">[</span><span class="n">fib</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">13</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Existen dos maneras de crear funciones parciales en Python. La primera es hacerlo explícitamente:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sumar_cantidad</span><span class="p">(</span><span class="n">cantidad</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">otro_elemento</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">otro_elemento</span> <span class="o">+</span> <span class="n">cantidad</span>
+    
+    <span class="k">return</span> <span class="n">sumar</span>
+
+<span class="n">sumar_dos</span> <span class="o">=</span> <span class="n">sumar_cantidad</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># creas una funcion aplicada parcialmente</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;2 + 4 = </span><span class="si">{</span><span class="n">sumar_dos</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2"> | 10 + 2 = </span><span class="si">{</span><span class="n">sumar_dos</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2 + 4 = 6 | 10 + 2 = 12
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Otra manera es usar el método <code>partial</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+
+<span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">sumar_dos</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">sumar</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># hay que nombrar los parametros que vamos a &quot;sobrescribir&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;2 + 4 = </span><span class="si">{</span><span class="n">sumar_dos</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2"> | 10 + 2 = </span><span class="si">{</span><span class="n">sumar_dos</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2 + 4 = 6 | 10 + 2 = 12
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Existen, además, conceptos relacionados, como la <a href="https://www.campusmvp.es/recursos/post/Que-es-la-Currificacion-en-programacion-funcional.aspx"><em>currificación</em></a> o las <a href="https://blog.ch3m4.org/2013/10/25/clausuras-en-python-parte-1/">clausuras</a>.</p>
+<p>👉 <a href="https://rico-schmidt.name/pymotw-3/functools/index.html">más info sobre funciones parciales</a> 👈</p>
+<p>👉 <a href="https://code-examples.net/es/q/1e58c4">más info sobre <em>memoization</em></a> 👈</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h2 id="3.-Computaci&#243;n-Num&#233;rica">3. Computaci&#243;n Num&#233;rica<a class="anchor-link" href="#3.-Computaci&#243;n-Num&#233;rica">&#182;</a></h2><p>Python es muy popular para Machine Learning. Algunas de las librerias más conocidas son <code>numpy</code>, <code>pandas</code>, <code>matplotlib</code>, <code>scikit-learn</code>, <code>scipy</code>, y algunas orientadas a redes neuronales, como son <code>tensorflow</code> o <code>pytorch</code>.</p>
+<p>En este <em>notebook</em> veremos dos paquetes esenciales: <code>numpy</code> y <code>pandas</code>.</p>
+<h3 id="Numpy">Numpy<a class="anchor-link" href="#Numpy">&#182;</a></h3><p>Numpy es el <strong>paquete</strong> de computación numérica <strong>más usado</strong> de Python. Proporciona una infinidad de estructuras de datos y funciones que permiten el manejo masivo de datos. Es rápido gracias a que ejecuta C por debajo (como si no 😉), y <strong>permite realizar operaciones entre conjuntos grandes de datos</strong>, con un estilo similar a lo que se puede hacer en <u>Matlab y R</u>.</p>
+<p>Veamos un ejemplo:</p>
 
 </div>
 </div>
@@ -14319,7 +15632,7 @@ En la mayoría de IDEs o entornos de desarrollo, puedes marcar con un 🔴 en la
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>No era lo esperado, ¿no?</p>
 <p>En <code>numpy</code>, <strong>la estructura básica es el array</strong>, que es el "equivalente" a la lista en Python. Al igual que una lista, puede tener 1 o más dimensiones y puede tener varios tipos de datos alojados, aunque lo más frecuente es que solo tenga un tipo.</p>
-<p>Aún así, <strong>la estructura más comun es el nd-array o array multidimensional</strong>, pues permite almacenar datos en varios niveles de organización.</p>
+<p>Aún así, <strong>la estructura más común es el nd-array o array multidimensional</strong>, pues permite almacenar datos en varios niveles de organización. De hecho, los arrays multidimensionales <u>son inmutables</u>.</p>
 
 </div>
 </div>
@@ -14701,6 +16014,7 @@ np.sum([[1 2 3]]) = 6
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><br/></p>
 <p>Una característica fundamental de <code>numpy</code> es el <strong><em>broadcasting</em></strong> o "propagación", que asegura la posibilidad de realizar operaciones aritmeticas (suma o multiplicacion) entre matrices que, bien no tienen las mismas dimensiones, pero son <em>compatibles</em>. Veámoslo:</p>
 <p><img src="https://i.imgur.com/6JjFuXp.png" width="40%"/></p>
 <p>Si quieres saber más de <code>numpy</code>, te recomiendo el siguiente enlace:</p>
@@ -15486,6 +16800,14 @@ Name: species, dtype: object</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Fijate que <code>pandas</code> aplica conceptos funcionales, como la inmutabilidad de datos al modificar <code>dataframes</code> 👇</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[145]:</div>
@@ -15590,865 +16912,15 @@ Name: species, dtype: object</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Progamaci&#243;n-funcional">Progamaci&#243;n funcional<a class="anchor-link" href="#Progamaci&#243;n-funcional">&#182;</a></h2><p>La programación funcional es un <strong>paradigma de la programación</strong>, basada en el <em>lambda calculus</em>. Realmente ya has dado algo de programación funcional en Python, aunque no te hayas dado cuenta. Las <em>listas por comprensión</em> (<code>[x for x in range(10)]</code>) y la compilación perezosa de funciones es algo ímplicito en el lenguaje. Además, podemos ver otras características de lenguajes funcionales en Python.</p>
-<p>Como antes comentamos, las funciones son <em>ciudadanos de primera clase</em> en Python. Ésto también se conoce como <u>funciones de alto orden</u>: virtualmente, toda función puede <u>ser usada como parámetro de otra función o devolver otra función</u>. Este último concepto, el de devolver otra función, también se conoce como <u>funciones parciales</u>, porque se aplican <em>parcialmente</em>.</p>
-<p>Muchas de las utilidades funcionales están ya incluidas (<em>built-in</em>), en la libreria estándar <a href="https://docs.python.org/3.7/library/functools.html"><em>functools</em></a> o en  <a href="https://docs.python.org/3.7/library/itertools.html"><em>itertools</em></a> (para generar, por ejemplo, secuencias infinitas).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Funciones-parciales">Funciones parciales<a class="anchor-link" href="#Funciones-parciales">&#182;</a></h3><p>La idea principal es que <strong>toda función $A$ con $N$ parámetros devuelve otra función $B$ con $N-1$ parámetros</strong>, donde $B$ <strong>tiene un estado interno diferente a $A$</strong>. Ésto quiere decir que, al igual que las clases, las funciones pueden mantener un estado interno (como la referencia <em>self</em> en las clases!). Un ejemplo clásico es el cálculo del <a href="http://www.pythondiario.com/2018/08/sucesion-de-fibonacci-con-python.html">número n de <em>fibonacci</em></a>:</p>
-<p>$f_{0}=0\,$</p>
-<p>$f_{1}=1\,$</p>
-<p>$f_n = f_{n-1} + f_{n-2}$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">configurar_fib</span><span class="p">():</span>
-    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>  <span class="c1"># mantenemos un estado interno en la función. Esto se conoce como &quot;memoization&quot;</span>
-    <span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">a</span>
-        <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">b</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">fib</span>
-        
-<span class="n">fib</span> <span class="o">=</span> <span class="n">configurar_fib</span><span class="p">()</span>
-
-<span class="p">[</span><span class="n">fib</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">13</span><span class="p">)]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Existen dos maneras de crear funciones parciales en Python. La primera es hacerlo explícitamente:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sumar_cantidad</span><span class="p">(</span><span class="n">cantidad</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">otro_elemento</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">otro_elemento</span> <span class="o">+</span> <span class="n">cantidad</span>
-    
-    <span class="k">return</span> <span class="n">sumar</span>
-
-<span class="n">sumar_dos</span> <span class="o">=</span> <span class="n">sumar_cantidad</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># creas una funcion aplicada parcialmente</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;2 + 4 = </span><span class="si">{</span><span class="n">sumar_dos</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2"> | 10 + 2 = </span><span class="si">{</span><span class="n">sumar_dos</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2 + 4 = 6 | 10 + 2 = 12
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Otra manera es usar el método <code>partial</code>:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
-
-<span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-
-<span class="n">sumar_dos</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">sumar</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># hay que nombrar los parametros que vamos a &quot;sobrescribir&quot;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;2 + 4 = </span><span class="si">{</span><span class="n">sumar_dos</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2"> | 10 + 2 = </span><span class="si">{</span><span class="n">sumar_dos</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2 + 4 = 6 | 10 + 2 = 12
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Existen, además, conceptos relacionados, como la <a href="https://www.campusmvp.es/recursos/post/Que-es-la-Currificacion-en-programacion-funcional.aspx"><em>currificación</em></a> o las <a href="https://blog.ch3m4.org/2013/10/25/clausuras-en-python-parte-1/">clausuras</a>.</p>
-<p>👉 <a href="https://rico-schmidt.name/pymotw-3/functools/index.html">más info sobre funciones parciales</a> 👈</p>
-<p>👉 <a href="https://code-examples.net/es/q/1e58c4">más info sobre <em>memoization</em></a> 👈</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Map,-Filter,-Reduce-y-Zip">Map, Filter, Reduce y Zip<a class="anchor-link" href="#Map,-Filter,-Reduce-y-Zip">&#182;</a></h3><p>El <strong>lenguaje funcional</strong> permite una <strong>abstracción</strong> a la hora de <strong>modificar estructuras de datos</strong>. En vez de pensar cómo cambiar una estructura, como hacemos con un bucle <code>for</code>, <strong>pasamos a pensar qué queremos cambiar</strong>. Esto nos ahorra, por ejemplo, errores de acceso a memoria.</p>
-<p>Vamos a dar <strong>4 funciones fundamentales de los lenguajes funcionales</strong>:</p>
-<ul>
-<li><code>map</code> permite <u>aplicar</u> a cada elemento de una estructura, <u>una función</u>. Por ejemplo, podemos sumar 1 a todos los elementos de una lista:</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-
-<span class="k">def</span> <span class="nf">mas1</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">valor</span> <span class="o">+</span> <span class="mi">1</span>
-
-<span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">mas1</span><span class="p">,</span> <span class="n">list1</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[14]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[2, 3, 4]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><code>filter</code> permite <u>seleccionar</u> los elementos de una estructura que cumplan la función usada. Por ejemplo, podemos escoger solo los numeros pares de una lista:</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">esPar</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">valor</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
-
-<span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">esPar</span><span class="p">,</span> <span class="n">list1</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[2]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><code>reduce</code> permite <u>reorganizar</u> una estructura A para obtener otra estructura B. Normalmente, se usa para condensar estructuras complejas y conseguir estructuras mas simples, con valores acumulados. Por ejemplo, podemos sumar todos los elementos de una lista para obtener un valor total (una estructura más simple):</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
-
-<span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="n">valor1</span><span class="p">,</span> <span class="n">valor2</span><span class="p">):</span>
-    <span class="c1"># ojito! Ten en cuenta que, para &#39;reduce&#39; el valor se acumula en el segundo (2do) valor</span>
-    <span class="k">return</span> <span class="n">valor1</span> <span class="o">+</span> <span class="n">valor2</span>
-
-<span class="n">reduce</span><span class="p">(</span><span class="n">sumar</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[18]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>6</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><code>zip</code> permite <u>agrupar</u> varias estructuras $A_x$ en una sola estructura $B$. La estructura $B$ está <u>formada por tuplas de los elementos de las estructuras $A_x$</u>. Por ejemplo, podemos agrupar los nombres y alturas de personas en una sola lista:</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nombres</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Quino&quot;</span><span class="p">,</span> <span class="s2">&quot;Andres&quot;</span><span class="p">,</span> <span class="s2">&quot;Fernando&quot;</span><span class="p">]</span>
-<span class="n">altura</span> <span class="o">=</span> <span class="p">[</span><span class="mi">181</span><span class="p">,</span> <span class="mi">178</span><span class="p">,</span> <span class="mi">180</span><span class="p">]</span>
-
-<span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">nombres</span><span class="p">,</span> <span class="n">altura</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[(&#39;Quino&#39;, 181), (&#39;Andres&#39;, 178), (&#39;Fernando&#39;, 180)]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>¿Por qué ocurre ésto? ¿Por qué hay que usar <code>list</code>? Respuesta: generadores (mira más abajo) 👇</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">mas1</span><span class="p">,</span> <span class="n">lista1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">esPar</span><span class="p">,</span> <span class="n">lista1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">nombres</span><span class="p">,</span> <span class="n">altura</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;map object at 0x0000022FD5D08A08&gt;
-&lt;filter object at 0x0000022FD5D085C8&gt;
-&lt;zip object at 0x0000022FD5D089C8&gt;
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Estas ideas se aplican en estructuras de procesamiento de datos a gran escala, como es <strong><em>MapReduce</em></strong>:</p>
-<p><img src="https://i.imgur.com/MCee3gs.jpg" width="70%"/></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="M&#225;s-listas-por-comprensi&#243;n">M&#225;s listas por comprensi&#243;n<a class="anchor-link" href="#M&#225;s-listas-por-comprensi&#243;n">&#182;</a></h3><ul>
-<li>Una manera directa de definir un diccionario es usar una sintaxis similar a la que usamos para listas por comprensión</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">,</span> <span class="s2">&quot;altura&quot;</span><span class="p">,</span> <span class="s2">&quot;esJoven&quot;</span><span class="p">]</span>
-<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;quino&quot;</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
-<span class="c1">#</span>
-<span class="n">dict1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s2">&quot;quino&quot;</span><span class="p">,</span> <span class="n">altura</span><span class="o">=</span><span class="mi">180</span><span class="p">,</span> <span class="n">esJoven</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">dict2</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;quino&quot;</span><span class="p">,</span> <span class="s2">&quot;altura&quot;</span><span class="p">:</span> <span class="mi">180</span><span class="p">,</span> <span class="s2">&quot;esJoven&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>  <span class="c1"># al estilo JSON / JavaScript</span>
-<span class="n">dict3</span> <span class="o">=</span> <span class="p">{</span> <span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span> <span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dict3</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;nombre&#39;: &#39;quino&#39;, &#39;altura&#39;: 180, &#39;esJoven&#39;: True}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>También están los <em>generadores</em>, algo fundamental para lenguajes como Haskell. Es como una lista, pero <u>no calcula todos los valores de la lista al momento</u>. Para obtener todos los valores, simplemente usa <code>list()</code>:</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lista1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lista1</span><span class="p">)</span>
-
-<span class="n">generador1</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">generador1</span><span class="p">)</span>
-
-<span class="n">generador2</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">generador2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-range(0, 10)
-&lt;generator object &lt;genexpr&gt; at 0x0000022FD5C6E9C8&gt;
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Inmutabilidad-de-datos">Inmutabilidad de datos<a class="anchor-link" href="#Inmutabilidad-de-datos">&#182;</a></h3><p>Los llamados <strong>lenguajes funcionales puros</strong> es un sub-paradigma que se centra en que <u>el resultado de cualquier función dependa únicamente en los parámetros que le pasas</u>, es decir, si ejecutas 2 veces una función con los mismos parámetros, ambas ejecuciones te devolverán lo mismo. Por ello, si usamos <u>variables mutables</u>, puede pasar esto:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
-
-<span class="k">def</span> <span class="nf">agrega_numero</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
-    <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">lista</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-<span class="n">agrega_numero</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># ¿Que devuelve?</span>
-<span class="n">agrega_numero</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># ¿Que devuelve?</span>
-</pre></div>
-<p>👆 ahí vemos que <strong>Python no es puramente funcional</strong> (ni queremos 😛).</p>
-<p>Si ya conoces algun lenguaje con variables inmutables, sabrás que (en general) tienen mejor rendimiento que los lenguajes que no: Clojure, Haskell, Scala, Rust... Las ventajas de las estructuras inmutables, es que proporcionan <strong>paralelismo de datos</strong>, <strong>mayor seguridad</strong> y <strong>código más simple</strong>.</p>
-<p><u>Algunas estructuras inmutables en Python son las tuplas, los sets "congelados" (*frozenset*), `range` y los tipos básicos (int, float, ...)</u></p>
-<p>👉 <a href="https://medium.com/dailyjs/the-state-of-immutability-169d2cd11310">más info</a> 👈</p>
-<p>👉 <a href="https://www.youtube.com/watch?v=xJCPpDlk9_w">¿algo práctico?</a> 👈</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-34-8a53e3328d02&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      1</span> v1 <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-green-intense-fg ansi-bold">True</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>v1<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-cyan-intense-fg ansi-bold">3</span>
-
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;tuple&#39; object does not support item assignment</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;tomeu&quot;</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;ingles c1&quot;</span><span class="p">)</span>
-<span class="n">my_var</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
-<span class="n">my_var</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[35]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>frozenset({180, 25, &#39;ingles c1&#39;, &#39;tomeu&#39;})</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Funciones-an&#243;nimas-o-lambda">Funciones an&#243;nimas o <em>lambda</em><a class="anchor-link" href="#Funciones-an&#243;nimas-o-lambda">&#182;</a></h3><p><img src="https://i.imgur.com/IkMaR4v.png" width="35%"/></p>
-<p>Si has usado JavaScript, Haskell, Java 8+, ... conocerás las funciones anónimas. Éstas permiten <strong>definir una función de un solo uso en una sola línea</strong>. Digamos que las funciones que usamos, por ejemplo, para el <code>map</code> (<code>mas1(valor)</code>) solo la usamos ahí. ¿Por qué definir una función nueva, si simplemente puedes hacer...</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-
-<span class="c1"># def mas1(valor):</span>
-<span class="c1">#     return valor + 1</span>
-
-<span class="n">list1_mas1</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">valor</span><span class="p">:</span> <span class="n">valor</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
-<span class="nb">list</span><span class="p">(</span><span class="n">list1_mas1</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[38]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[2, 3, 4]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>👉 <a href="https://towardsdatascience.com/python-lambda-function-b6e1fa3420c1">más info</a> 👈</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Lazy-evaluation"><em>Lazy evaluation</em><a class="anchor-link" href="#Lazy-evaluation">&#182;</a></h3><p>Quizás ya te hayas preguntado <u>por qué Python compila código que no es correcto</u>, siempre que esté dentro de funciones o clases. Ésto es porque <strong>Python usa evaluación perezosa</strong> dentro de funciones. Esta funcionalidad no solo está en la evaluación de funciones, sino también en algo llamado <strong>generadores</strong>.</p>
-<p>Básicamente, Python permite <strong>compilar una función cuando es declarada</strong> y solo <strong>comprobar si está correctamente definida cuando se ejecuta al menos una vez</strong>.</p>
-<p>👉 <a href="https://swizec.com/blog/python-and-lazy-evaluation/swizec/5148">más info</a> 👈</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">esto_no_hace_nada</span><span class="p">(</span><span class="n">illo</span><span class="p">):</span>
-    <span class="n">asdlkjqwelkj</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">esto_no_hace_nada</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-44-67ccf1db6a62&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>esto_no_hace_nada<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-43-97c2c1fc4799&gt;</span> in <span class="ansi-cyan-fg">esto_no_hace_nada</span><span class="ansi-blue-intense-fg ansi-bold">(illo)</span>
-<span class="ansi-green-fg">      1</span> <span class="ansi-green-intense-fg ansi-bold">def</span> esto_no_hace_nada<span class="ansi-yellow-intense-fg ansi-bold">(</span>illo<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>asdlkjqwelkj
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;asdlkjqwelkj&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">generador_1</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">generador_2</span> <span class="o">=</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
-<span class="n">generador_3</span> <span class="o">=</span> <span class="nb">reversed</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">generador_1</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">generador_1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">generador_2</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">generador_2</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">generador_2</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">generador_3</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">generador_3</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">generador_3</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>range(0, 10) &lt;class &#39;range&#39;&gt;
-&lt;enumerate object at 0x000002365B9B9818&gt; &lt;class &#39;enumerate&#39;&gt; [(0, 10), (1, 20), (2, 30)]
-&lt;list_reverseiterator object at 0x000002365BE53248&gt; &lt;class &#39;list_reverseiterator&#39;&gt; [30, 20, 10]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="En-resumen">En resumen<a class="anchor-link" href="#En-resumen">&#182;</a></h3><p>La programación funcional es una baza a tener en cuenta, si queremos crear <strong>programas deterministas</strong>, es decir, cuyos resultados no puedan tener <em>efectos colaterales</em> sea cual sea el conjunto de datos de entrada.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datos_json</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Jorge&quot;</span><span class="p">,</span> <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;altura&quot;</span><span class="p">:</span> <span class="mi">180</span><span class="p">,</span> <span class="s2">&quot;profesion&quot;</span><span class="p">:</span> <span class="s2">&quot;marketing&quot;</span><span class="p">}</span>
-
-<span class="n">datos_json</span><span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">]</span> <span class="c1">#ok! pero y si...</span>
-<span class="n">datos_json</span><span class="p">[</span><span class="s2">&quot;Nombre&quot;</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-1-4118594dda04&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      2</span> 
-<span class="ansi-green-fg">      3</span> datos_json<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#34;nombre&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-red-intense-fg ansi-bold">#ok! pero y si...</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 4</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>datos_json<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#34;Nombre&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-
-<span class="ansi-red-intense-fg ansi-bold">KeyError</span>: &#39;Nombre&#39;</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datos_json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Nombre&quot;</span><span class="p">,</span> <span class="s2">&quot;te has equivocao de clave :P&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;te has equivocao de clave :P&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
 <h2 id="Y-de-aqu&#237;..-&#191;a-Pek&#237;n?">Y de aqu&#237;.. &#191;a Pek&#237;n?<a class="anchor-link" href="#Y-de-aqu&#237;..-&#191;a-Pek&#237;n?">&#182;</a></h2><p>Creo que el contenido del capítulo ya es suficientemente denso como para seguir avanzando, así que dejo unos cuantos recursos por si quereis seguir avanzando:</p>
 <h3 id="Extras">Extras<a class="anchor-link" href="#Extras">&#182;</a></h3><ul>
 <li><p>Expresiones Regulares. Si no sabes lo que son, <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions">Mozilla tiene un artículo muy bueno</a> (practica con <a href="https://regexr.com/">RegExr, es genial!</a>). En Python funcionan <a href="http://buhoprogramador.com/entrada/10/expresiones-regulares-en-python">de otro modo</a>. Para más avanzados, <a href="https://www.pythonsheets.com/notes/python-rexp.html">aquí</a>.</p>
 </li>
-<li><p>Descubre la 🧙‍magia 🧙‍ dentro de Jupyter. Explora sus <em>magics</em>, como <code>%time</code>, <code>%timeit</code> o <code>%matplotlib</code> <a href="https://ipython.readthedocs.io/en/stable/interactive/magics.html">aquí</a>.</p>
+<li><p>Descubre la 🧙‍ magia 🧙‍ dentro de Jupyter. Explora sus <em>magics</em>, como <code>%time</code>, <code>%timeit</code> o <code>%matplotlib</code> <a href="https://ipython.readthedocs.io/en/stable/interactive/magics.html">aquí</a>.</p>
+<blockquote><p>Fíjate! También son decoradores 🤩</p>
+</blockquote>
 </li>
 <li><p>Cómo funciona la Lectura/Escritura de archivos. Más <a href="https://pythonista.io/cursos/py101/escritura-y-lectura-de-archivos">aquí</a>.</p>
-</li>
-<li><p>Ligeramente ligado con lo anterior, y sobre todo con estructuras de datos, están los <strong>generadores</strong>. <a href="https://alvarohurtado.es/2013/08/31/generadores-en-python/">En este artículo</a> tienes una explicación de qué son y para qué sirven. Para avanzados: <a href="https://www.pythonsheets.com/notes/python-generator.html">aquí</a>.</p>
-</li>
-<li><p>Los <strong>decoradores</strong> son algo muy interesante, algo único de Python. Es algo que me estoy mirando recientemente y permiten, además de mejorar la documentación de tu código, pre-procesarlo para poder añadir funcionalidades extras. Algo así <strong>como las macros de Excel o Rust</strong>. Para iniciarte: <a href="https://codingornot.com/python-que-es-un-decorador">aquí</a>. Para avanzados: <a href="https://realpython.com/primer-on-python-decorators/">aquí</a>.</p>
 </li>
 <li><p><a href="https://blog.adrianistan.eu/cosas-no-sabias-python">Este artículo</a> repasa algunos conceptos ya vistos de manera más profunda.</p>
 </li>
@@ -16482,7 +16954,20 @@ range(0, 10)
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p>Licencia: <a href="https://www.tiobe.com/tiobe-index/">GNU GPLv3</a> 2020</p>
+<h2 id="&#191;M&#225;s-dudas?">&#191;M&#225;s dudas?<a class="anchor-link" href="#&#191;M&#225;s-dudas?">&#182;</a></h2><p>Puedes encontrarnos por</p>
+<ul>
+<li>Twitter: en @AIMalaga, @AIMatesanz (Andrés) y @josocjoq (Joaquín)</li>
+<li>Telegram: en nuestro grupo <a href="https://t.me/MalagaSchoolOfAI">https://t.me/MalagaSchoolOfAI</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p>Licencia: MalagaAI Copyright 2020</p>
 
 </div>
 </div>
