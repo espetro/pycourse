@@ -13143,7 +13143,7 @@ div#notebook {
 <p>Además, al final del <em>notebook</em>, así como en cada bloque, hay varios recursos para que podáis ir avanzando por vuestra cuenta. Antes de comenzar, hay 3 modos de obtener este <em>notebook</em>.</p>
 <ul>
 <li>A través de GitHub, en el repositorio <a href="">@espetro/pyCourse</a>. Duplicas el repositorio (bien descargas el <code>.zip</code> o ejecutas <code>git clone</code>) y usas el <em>notebook</em> en local. Yo uso <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a> pero también podeis usar IPython.</li>
-<li>Mediante <a href="https://mybinder.org/v2/gh/espetro/pycourse/master">Binder</a>, un entorno de <em>notebooks</em> gratuito en la nube. Como alternative también lo tenéis en <a href="">Google Colab</a>.</li>
+<li>Mediante <a href="https://mybinder.org/v2/gh/espetro/pycourse/master">Binder</a>, un entorno de <em>notebooks</em> gratuito en la nube. Como alternative también lo tenéis en <a href="https://colab.research.google.com/github/espetro/pycourse/blob/master/Capitulo1.ipynb">Google Colab</a>.</li>
 </ul>
 <p><br/><br/></p>
 <p><img src="https://i.imgur.com/yAwThCj.jpg" width="30%" style="margin-left:25em"/></p>
@@ -16911,6 +16911,20 @@ Name: species, dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Librerias-para-visualizaci&#243;n-de-datos">Librerias para visualizaci&#243;n de datos<a class="anchor-link" href="#Librerias-para-visualizaci&#243;n-de-datos">&#182;</a></h3><p>Normalmente en Python se usa <code>matplotlib</code>, una libreria para visualizacion de datos cientificos. Aun asi, yo no soy muy fan, pues es muy similar a la forma de dibujar graficos de MatLab 🙂 Aquí hay algunas alternativas:</p>
+<ul>
+<li><a href="https://plot.ly/">Plotly</a>, una libreria multiplataforma, que permite crear graficos interactivos (usa JS por detras jsjs). Además, permite interoperabilidad entre Python, R y Julia 🤩</li>
+<li><a href="https://docs.bokeh.org/en/latest/">Bokeh</a> es una alternativa muy similar a Plotly.</li>
+<li>Si habeis programado en R, conocereis <code>ggplot2</code>. En Python tienes <a href="https://plotnine.readthedocs.io/en/stable/index.html">plotnine</a> y <a href="https://yhat.github.io/ggpy/">ggpy</a>, que usan casi la misma API.</li>
+<li><a href="https://altair-viz.github.io/gallery/simple_bar_chart.html">Altair Vega</a> tambien usa una sintaxis modular para componer graficos.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="Y-de-aqu&#237;..-&#191;a-Pek&#237;n?">Y de aqu&#237;.. &#191;a Pek&#237;n?<a class="anchor-link" href="#Y-de-aqu&#237;..-&#191;a-Pek&#237;n?">&#182;</a></h2><p>Creo que el contenido del capítulo ya es suficientemente denso como para seguir avanzando, así que dejo unos cuantos recursos por si quereis seguir avanzando:</p>
 <h3 id="Extras">Extras<a class="anchor-link" href="#Extras">&#182;</a></h3><ul>
@@ -16925,6 +16939,10 @@ Name: species, dtype: object</pre>
 <li><p><a href="https://blog.adrianistan.eu/cosas-no-sabias-python">Este artículo</a> repasa algunos conceptos ya vistos de manera más profunda.</p>
 </li>
 <li><p><strong>Para los usuarios de Windows</strong>, recomiendo mirar el <a href="https://ubunlog.com/wsl-como-instalar-y-usar-el-susbistema-ubuntu-en-windows-10/"><em>WSL o Windows Subsystem for Linux</em></a>, el cual permite ejecutar sistemas Linux como Ubuntu o Debian dentro de Windows (al más puro estilo Docker).</p>
+</li>
+<li><p>Ve investigando alguna de las librerias que permiten aplicar modelos de Reinforcement Learning, como OpenAI <a href="https://github.com/openai/baselines"><code>gym</code></a>, IntelAI <a href="https://nervanasystems.github.io/coach/">coach</a>, Unity <a href="https://unity3d.com/machine-learning">ML Agents</a> o <a href="https://github.com/PaddlePaddle/PARL">PARL</a>.</p>
+</li>
+<li><p>También puedes revisar librerias que te facilitan la creación y mejora de modelos, como <a href="https://neptune.ai/">Neptune</a> y <a href="https://www.tensorflow.org/tensorboard">Tensorboard</a>.</p>
 </li>
 </ul>
 <p>¿Un consejo? Busca código donde se use lo que menciono; <strong>lo más útil</strong> es que puedas ver <strong>cuándo y por qué se usan</strong> las distintas <strong><em>features</em> del lenguaje</strong> - <strong>y por qué no usarlas si no es necesario</strong>.</p>
